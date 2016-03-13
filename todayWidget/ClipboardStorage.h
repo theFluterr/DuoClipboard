@@ -11,4 +11,9 @@
 
 @interface ClipboardStorage : NSObject
 
+@property NSMutableArray *clipStorage;
+
+-(void)pushClipEntry:(NSString*)string;
+-(void)returnEntryAtIndex:(NSInteger)index;
+
 @end

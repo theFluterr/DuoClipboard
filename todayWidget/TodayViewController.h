@@ -7,7 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ClipboardStorage.h"
 
 @interface TodayViewController : NSViewController
+
+@property ClipboardStorage* storage;
+@property NSMutableArray *array;
+
+@property (strong) IBOutlet NSButton *firstButton;
+@property (strong) IBOutlet NSButton *secondButton;
 
 @end

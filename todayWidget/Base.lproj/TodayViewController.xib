@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController">
             <connections>
+                <outlet property="firstButton" destination="oxc-Ac-q0C" id="x3G-mu-eSS"/>
+                <outlet property="secondButton" destination="GXs-f6-1CL" id="P3S-F8-k6G"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -26,6 +28,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="secondButtonPressed:" target="-2" id="3hq-Zm-2XZ"/>
+                    </connections>
                 </button>
                 <box verticalHuggingPriority="750" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Ult-Wh-RHW">
                     <rect key="frame" x="42" y="66" width="251" height="5"/>
@@ -59,6 +64,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="firstButtonPressed:" target="-2" id="f3o-Rj-1jF"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>
