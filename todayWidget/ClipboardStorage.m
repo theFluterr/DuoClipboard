@@ -27,9 +27,10 @@
 -(void)returnEntryAtIndex:(NSInteger)index{
   
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-    NSArray *array = [NSArray new];
-    array = [clipStorage objectAtIndex:index];
-    [pasteboard writeObjects:array];
+    NSString *string = [NSString new];
+    string = [clipStorage objectAtIndex:index];
+    [pasteboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
+    [pasteboard setString:string forType:NSStringPboardType];
     
 }
 
