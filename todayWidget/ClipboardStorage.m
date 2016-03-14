@@ -8,13 +8,13 @@
 
 #import "ClipboardStorage.h"
 
-@implementation ClipboardStorage
+@implementation ClipboardStorage 
 
-@synthesize clipStorage;
 
 -(id)init {
     self = [super init];
     if (!self) return nil;
+    clipStorage = [[NSMutableArray alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushClipEntry) name:@"CopyHotkeyWasPressed" object:nil];
     return self;
 }
@@ -23,7 +23,7 @@
 //Exception is being thrown here
 -(void)pushClipEntry {
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-    clipStorage = [[NSMutableArray alloc] init];
+    //clipStorage = [[NSMutableArray alloc] init];
     NSString* string =  [pasteboard stringForType:NSPasteboardTypeString];
     if ([clipStorage count] == 1 || [clipStorage count] == 2)
         clipStorage = [@[string, [clipStorage objectAtIndex:0]]mutableCopy];

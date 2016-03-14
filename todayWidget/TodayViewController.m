@@ -58,12 +58,12 @@
 }
 
 - (IBAction)firstButtonPressed:(id)sender {
-    if ([_storage.clipStorage objectAtIndex:0] != nil)
+    
         [_storage returnEntryAtIndex:0];
 }
 
 - (IBAction)secondButtonPressed:(id)sender {
-    if ([_storage.clipStorage objectAtIndex:1] != nil)
+    //if ([_storage.clipStorage objectAtIndex:1] != nil)
         [_storage returnEntryAtIndex:1];
 }
 

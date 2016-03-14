@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@interface ClipboardStorage : NSObject
+@interface ClipboardStorage : NSObject {
+    NSMutableArray *clipStorage;
+}
 
-@property NSMutableArray *clipStorage;
+
 
 -(void)pushClipEntry;
 -(void)returnEntryAtIndex:(NSInteger)index;
