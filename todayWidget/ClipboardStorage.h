@@ -14,7 +14,7 @@
 }
 
 
-
+-(BOOL)hasEntryAtIndex:(NSInteger)index;
 -(void)pushClipEntry;
 -(void)returnEntryAtIndex:(NSInteger)index;
 

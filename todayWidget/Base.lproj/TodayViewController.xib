@@ -18,13 +18,13 @@
             <rect key="frame" x="0.0" y="0.0" width="305" height="89"/>
             <subviews>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-f6-1CL">
-                    <rect key="frame" x="5" y="6" width="29" height="28"/>
+                    <rect key="frame" x="5" y="6" width="29" height="29"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="28" id="U6E-yA-s3L"/>
-                        <constraint firstAttribute="width" constant="29" id="Xj3-VA-e4p"/>
+                        <constraint firstAttribute="height" constant="29" id="Hab-jT-47o"/>
+                        <constraint firstAttribute="width" constant="29" id="mJu-LC-WHY"/>
                     </constraints>
                     <animations/>
-                    <buttonCell key="cell" type="square" title="2" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WZf-qW-LYo">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ButtonDisabled" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="WZf-qW-LYo">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -56,11 +56,11 @@
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oxc-Ac-q0C">
                     <rect key="frame" x="5" y="54" width="29" height="29"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="29" id="pfV-19-5mb"/>
-                        <constraint firstAttribute="width" constant="29" id="w9b-Lp-Gfm"/>
+                        <constraint firstAttribute="height" constant="29" id="B8V-s4-aYx"/>
+                        <constraint firstAttribute="width" constant="29" id="t6j-eU-Zvp"/>
                     </constraints>
                     <animations/>
-                    <buttonCell key="cell" type="square" title="1" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VOx-wC-gLR">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ButtonDisabled" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="VOx-wC-gLR">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -73,16 +73,19 @@
                 <constraint firstItem="bIV-jD-plK" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="57" id="1tL-AG-IVl"/>
                 <constraint firstItem="Ult-Wh-RHW" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="3bt-68-RR8"/>
                 <constraint firstAttribute="bottom" secondItem="bIV-jD-plK" secondAttribute="bottom" constant="20" id="49T-dS-9Fg"/>
-                <constraint firstItem="oxc-Ac-q0C" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="6wj-Xo-M5D"/>
-                <constraint firstItem="GXs-f6-1CL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="Iva-er-7aK"/>
-                <constraint firstItem="oxc-Ac-q0C" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="bUH-SK-SlO"/>
-                <constraint firstAttribute="bottom" secondItem="GXs-f6-1CL" secondAttribute="bottom" constant="6" id="rbg-O6-VTu"/>
+                <constraint firstAttribute="bottom" secondItem="GXs-f6-1CL" secondAttribute="bottom" constant="6" id="5lB-Lz-TGJ"/>
+                <constraint firstItem="oxc-Ac-q0C" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="PDp-yp-4Hv"/>
+                <constraint firstItem="GXs-f6-1CL" firstAttribute="top" secondItem="oxc-Ac-q0C" secondAttribute="bottom" constant="19" id="PfD-CW-2lG"/>
+                <constraint firstItem="oxc-Ac-q0C" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="QdS-fL-IiC"/>
+                <constraint firstItem="GXs-f6-1CL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="gfk-LX-fHj"/>
                 <constraint firstItem="Ult-Wh-RHW" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="57" id="sUJ-ht-SM9"/>
-                <constraint firstItem="GXs-f6-1CL" firstAttribute="top" secondItem="oxc-Ac-q0C" secondAttribute="bottom" constant="20" id="tTE-8q-Ze7"/>
                 <constraint firstItem="bIV-jD-plK" firstAttribute="top" secondItem="Ult-Wh-RHW" secondAttribute="bottom" constant="47" id="xfI-I1-zSY"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="332.5" y="436.5"/>
         </customView>
     </objects>
+    <resources>
+        <image name="ButtonDisabled" width="297" height="297"/>
+    </resources>
 </document>

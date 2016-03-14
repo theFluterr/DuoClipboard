@@ -22,6 +22,7 @@
 		754F62EF1C959F8B0096C249 /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F62EE1C959F8B0096C249 /* DDHotKeyUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		754F62F21C959F950096C249 /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F62F11C959F950096C249 /* DDHotKeyTextField.m */; settings = {ASSET_TAGS = (); }; };
 		754F62F51C95A10A0096C249 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754F62F41C95A10A0096C249 /* Carbon.framework */; settings = {ASSET_TAGS = (); }; };
+		75EB47DE1C96AB4100EC9DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7537E4FC1C94A00F0043C863 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7537E5171C94A0C70043C863 /* TodayViewController.xib in Resources */,
+				75EB47DE1C96AB4100EC9DE6 /* Assets.xcassets in Resources */,
 				7537E51B1C94A0C70043C863 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

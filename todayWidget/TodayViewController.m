@@ -58,13 +58,22 @@
 }
 
 - (IBAction)firstButtonPressed:(id)sender {
-    
+    if ([_storage hasEntryAtIndex:0]){
         [_storage returnEntryAtIndex:0];
+        [_firstButton setImage:[NSImage imageNamed:@"ButtonEnabledPressed"]];
+            if ([_storage hasEntryAtIndex:1])
+                [_secondButton setImage:[NSImage imageNamed:@"ButtonEnabledNotPressed"]];
+            else
+                [_secondButton setImage:[NSImage imageNamed:@"ButtonDisabled"]];
+    }
 }
 
 - (IBAction)secondButtonPressed:(id)sender {
-    //if ([_storage.clipStorage objectAtIndex:1] != nil)
+    if ([_storage hasEntryAtIndex:1]) {
         [_storage returnEntryAtIndex:1];
+        [_secondButton setImage:[NSImage imageNamed:@"ButtonEnabledPressed"]];
+        [_firstButton setImage:[NSImage imageNamed:@"ButtonEnabledNotPressed"]];
+    }
 }
 
 

@@ -19,6 +19,14 @@
     return self;
 }
 
+-(BOOL)hasEntryAtIndex:(NSInteger)index {
+    
+    if ([clipStorage count] >= index + 1)
+        return YES;
+    else
+        return NO;
+}
+
 //Method to pass strings to clipboard after cmd v
 //Exception is being thrown here
 -(void)pushClipEntry {
