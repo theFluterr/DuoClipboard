@@ -12,16 +12,27 @@
 
 @synthesize clipStorage;
 
+-(id)init {
+    self = [super init];
+    if (!self) return nil;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushClipEntry) name:@"CopyHotkeyWasPressed" object:nil];
+    return self;
+}
 
 //Method to pass strings to clipboard after cmd v
--(void)pushClipEntry:(NSString *)string {
+//Exception is being thrown here
+-(void)pushClipEntry {
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-    string =  [pasteboard stringForType:NSPasteboardTypeString];
-    [clipStorage insertObject:string atIndex:0];
-    if ([clipStorage count] > 2){
+    clipStorage = [[NSMutableArray alloc] init];
+    NSString* string =  [pasteboard stringForType:NSPasteboardTypeString];
+    if ([clipStorage count] == 1 || [clipStorage count] == 2)
+        clipStorage = [@[string, [clipStorage objectAtIndex:0]]mutableCopy];
+    else if ([clipStorage count] == 0)
+        [clipStorage insertObject:string atIndex:0];
+    else
         [clipStorage removeObjectAtIndex:2];
-        NSLog(@"Override!!!");
-    }
+    NSLog(@"%@", string);
+    
 }
 
 -(void)returnEntryAtIndex:(NSInteger)index{

@@ -8,12 +8,18 @@
 
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
+#import <Carbon/Carbon.h>
+#import "DDHotKeyCenter.h"
+#import "DDHotKeyUtilities.h"
 
 @interface TodayViewController () <NCWidgetProviding>
 
 @end
 
-@implementation TodayViewController
+@implementation TodayViewController{
+    DDHotKeyCenter *defaultHotKeyCenter;
+    DDHotKey *commandCopy;
+}
 
 -(void)awakeFromNib{
     [super awakeFromNib];
@@ -21,16 +27,27 @@
     
 }
 
--(void)keyDown:(NSEvent *)theEvent {
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    defaultHotKeyCenter = [DDHotKeyCenter sharedHotKeyCenter];
+     commandCopy = [defaultHotKeyCenter registerHotKeyWithKeyCode:kVK_ANSI_C modifierFlags:NSCommandKeyMask target:self action:@selector(sendClipboardNotification) object:nil];
     
-    if ([theEvent modifierFlags] & NSCommandKeyMask) {
-        NSString *character = [theEvent charactersIgnoringModifiers];
-        if ([character isEqualToString:@"c"]) {
-            //[_storage pushClipEntry];
-            NSLog(@"%@", [_storage.clipStorage objectAtIndex:0]);
-        }
-    }
-    [super keyDown:theEvent];
+}
+
+-(void)sendClipboardNotification {
+    
+    [defaultHotKeyCenter unregisterAllHotKeys];
+    NSDictionary *errorDict=[NSDictionary new];
+    NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource:
+                                   @"tell application \"System Events\"\n\
+                                   keystroke \"c\" using {command down}\n\
+                                   end tell"];
+    
+    NSAppleEventDescriptor *returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"CopyHotkeyWasPressed" object:self];
+    [defaultHotKeyCenter registerHotKey:commandCopy];
+    
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult result))completionHandler {
@@ -41,16 +58,13 @@
 }
 
 - (IBAction)firstButtonPressed:(id)sender {
-    _storage.clipStorage = [NSMutableArray new];
-
-    [_storage.clipStorage addObject:@"Hrello"];
-    [_storage.clipStorage addObject:@"mulolo"];
- 
-    [_storage returnEntryAtIndex:0];
+    if ([_storage.clipStorage objectAtIndex:0] != nil)
+        [_storage returnEntryAtIndex:0];
 }
 
 - (IBAction)secondButtonPressed:(id)sender {
-    [_storage returnEntryAtIndex:1];
+    if ([_storage.clipStorage objectAtIndex:1] != nil)
+        [_storage returnEntryAtIndex:1];
 }
 
 

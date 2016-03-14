@@ -18,6 +18,10 @@
 		7537E51B1C94A0C70043C863 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7537E5191C94A0C70043C863 /* InfoPlist.strings */; };
 		7537E51E1C94A0C70043C863 /* todayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7537E50B1C94A0C70043C863 /* todayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7537E5251C94A9480043C863 /* ClipboardStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537E5241C94A9480043C863 /* ClipboardStorage.m */; settings = {ASSET_TAGS = (); }; };
+		754F62EC1C959F5D0096C249 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F62EB1C959F5D0096C249 /* DDHotKeyCenter.m */; settings = {ASSET_TAGS = (); }; };
+		754F62EF1C959F8B0096C249 /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F62EE1C959F8B0096C249 /* DDHotKeyUtilities.m */; settings = {ASSET_TAGS = (); }; };
+		754F62F21C959F950096C249 /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F62F11C959F950096C249 /* DDHotKeyTextField.m */; settings = {ASSET_TAGS = (); }; };
+		754F62F51C95A10A0096C249 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754F62F41C95A10A0096C249 /* Carbon.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,13 @@
 		7537E51A1C94A0C70043C863 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7537E5231C94A9480043C863 /* ClipboardStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipboardStorage.h; sourceTree = "<group>"; };
 		7537E5241C94A9480043C863 /* ClipboardStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipboardStorage.m; sourceTree = "<group>"; };
+		754F62EA1C959F5D0096C249 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyCenter.h; path = "../../../../Downloads/DDHotKey-master/DDHotKeyCenter.h"; sourceTree = "<group>"; };
+		754F62EB1C959F5D0096C249 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyCenter.m; path = "../../../../Downloads/DDHotKey-master/DDHotKeyCenter.m"; sourceTree = "<group>"; };
+		754F62ED1C959F8B0096C249 /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyUtilities.h; path = "../../../../Downloads/DDHotKey-master/DDHotKeyUtilities.h"; sourceTree = "<group>"; };
+		754F62EE1C959F8B0096C249 /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyUtilities.m; path = "../../../../Downloads/DDHotKey-master/DDHotKeyUtilities.m"; sourceTree = "<group>"; };
+		754F62F01C959F950096C249 /* DDHotKeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyTextField.h; path = "../../../../Downloads/DDHotKey-master/DDHotKeyTextField.h"; sourceTree = "<group>"; };
+		754F62F11C959F950096C249 /* DDHotKeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyTextField.m; path = "../../../../Downloads/DDHotKey-master/DDHotKeyTextField.m"; sourceTree = "<group>"; };
+		754F62F41C95A10A0096C249 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = ../../../../../System/Library/Frameworks/Carbon.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7537E50E1C94A0C70043C863 /* NotificationCenter.framework in Frameworks */,
+				754F62F51C95A10A0096C249 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +142,7 @@
 		7537E50C1C94A0C70043C863 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				754F62F41C95A10A0096C249 /* Carbon.framework */,
 				7537E50D1C94A0C70043C863 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -138,6 +151,7 @@
 		7537E50F1C94A0C70043C863 /* todayWidget */ = {
 			isa = PBXGroup;
 			children = (
+				754F62F31C959FAB0096C249 /* DDHotKey */,
 				7537E5121C94A0C70043C863 /* TodayViewController.h */,
 				7537E5131C94A0C70043C863 /* TodayViewController.m */,
 				7537E5151C94A0C70043C863 /* TodayViewController.xib */,
@@ -156,6 +170,19 @@
 				7537E5111C94A0C70043C863 /* todayWidget.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		754F62F31C959FAB0096C249 /* DDHotKey */ = {
+			isa = PBXGroup;
+			children = (
+				754F62EA1C959F5D0096C249 /* DDHotKeyCenter.h */,
+				754F62EB1C959F5D0096C249 /* DDHotKeyCenter.m */,
+				754F62ED1C959F8B0096C249 /* DDHotKeyUtilities.h */,
+				754F62EE1C959F8B0096C249 /* DDHotKeyUtilities.m */,
+				754F62F01C959F950096C249 /* DDHotKeyTextField.h */,
+				754F62F11C959F950096C249 /* DDHotKeyTextField.m */,
+			);
+			name = DDHotKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7537E5251C94A9480043C863 /* ClipboardStorage.m in Sources */,
+				754F62F21C959F950096C249 /* DDHotKeyTextField.m in Sources */,
+				754F62EC1C959F5D0096C249 /* DDHotKeyCenter.m in Sources */,
+				754F62EF1C959F8B0096C249 /* DDHotKeyUtilities.m in Sources */,
 				7537E5141C94A0C70043C863 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +492,7 @@
 				7537E5061C94A00F0043C863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7537E51F1C94A0C70043C863 /* Build configuration list for PBXNativeTarget "todayWidget" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +501,7 @@
 				7537E5211C94A0C70043C863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

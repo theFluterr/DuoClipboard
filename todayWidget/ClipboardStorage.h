@@ -13,7 +13,7 @@
 
 @property NSMutableArray *clipStorage;
 
--(void)pushClipEntry:(NSString*)string;
+-(void)pushClipEntry;
 -(void)returnEntryAtIndex:(NSInteger)index;
 
 @end
